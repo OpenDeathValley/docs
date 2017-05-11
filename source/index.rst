@@ -7,10 +7,14 @@ Welcome to OpenDeathValley's documentation!
 ===========================================
 
 .. toctree::
-    :maxdepth: 2
-    :caption: Contents:
+    :caption: Table of Contents
+    :name: mastertoc
+    :includehidden:
+    :titlesonly:
 
-
+    game_information.rst
+    game_data.rst
+    miscellaneous.rst
 
 .. Indices and tables
 .. ==================

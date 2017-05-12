@@ -1,23 +1,19 @@
-OpenDeathValley
-===============
+# OpenDeathValley
+
 
 [![Documentation Status](https://readthedocs.org/projects/opendeathvalley/badge/?version=latest)](http://opendeathvalley.readthedocs.io/en/latest/?badge=latest)
 
-Documentation
--------------
+## Documentation
 
 Documentation is written in Sphinx, you will need python and sphinx installed to build it.
 
-Requirements
-^^^^^^^^^^^^
+### Requirements
+
 
 * [Python 2.7][python_2_7]
 * [Sphinx][python_sphinx]
 
-Style guide
-^^^^^^^^^^^
-
-.. code-block:: text
+### Style guide
 
     H1 => ========
     H2 => --------

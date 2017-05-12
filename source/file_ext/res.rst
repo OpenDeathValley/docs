@@ -4,9 +4,9 @@ RES
 File list
 ---------
 
-* :file:`.\Game\Data\Interface\Texts.res`
-* :file:`.\Game\Data\Interface\DEFAULT.RES`
-* :file:`.\Game\Data\Sounds\Expressions\Expressions.res`
+* :file:`.\\Game\\Data\\Interface\\Texts.res`
+* :file:`.\\Game\\Data\\Interface\\DEFAULT.RES`
+* :file:`.\\Game\\Data\\Sounds\\Expressions\\Expressions.res`
 
 Texts.res
 ---------
@@ -107,9 +107,9 @@ Example (Expressions.res)
 * UNK_DWORD_00 = 0x01
 * Number of entry = 0x000C (12)
 * First Entry length = 0x0014 (20)
-* First Entry path = "\DVI_XCT01E00V01.wav"
+* First Entry path = "\\DVI_XCT01E00V01.wav"
 * Second Entry length = 0x0014 (20)
-* Second Entry path = "\DVI_XCT01E01V......"
+* Second Entry path = "\\DVI_XCT01E01V......"
 
 'PICC'
 ^^^^^^

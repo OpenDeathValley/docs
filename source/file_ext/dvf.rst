@@ -6,8 +6,8 @@ This type of file contains sprites and animation data.
 File list
 ---------
 
-* :file:`.\Game\Data\Animations\*`
-* :file:`.\Game\Data\Characters\*`
+* :file:`.\\Game\\Data\\Animations\\*`
+* :file:`.\\Game\\Data\\Characters\\*`
 
 Specifications
 --------------

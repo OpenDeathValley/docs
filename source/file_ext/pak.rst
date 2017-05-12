@@ -9,7 +9,7 @@ PAK contains list of file stored in R5G6B5 bzip2 compressed image
 File List
 ---------
 
-* :file:`.\Game\Data\Interface\Loading.pak`
+* :file:`.\\Game\\Data\\Interface\\Loading.pak`
 
 But binary contains string:
 

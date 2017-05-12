@@ -9,8 +9,8 @@ Sound bank file
 File List
 ---------
 
-* :file:`.\Game\Data\Sounds\desperados.fxg`
-* :file:`.\Game\Data\Sounds\menu.fxg`
+* :file:`.\\Game\\Data\\Sounds\\desperados.fxg`
+* :file:`.\\Game\\Data\\Sounds\\menu.fxg`
 
 Specifications
 --------------

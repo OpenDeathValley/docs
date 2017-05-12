@@ -4,7 +4,7 @@ LOG
 File list
 ---------
 
-* :file:`.\Data\Configuration\debug.log`
+* :file:`.\\Data\\Configuration\\debug.log`
 
 Description
 -----------

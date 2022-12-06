@@ -213,7 +213,7 @@ The sound file (``sound_id``) associated with this frame (`Frame 14` of `animati
 
     <figure class="align-center">
     <audio controls="controls">
-      <source src="/_static/fx_1433.mp3" type="audio/mp3">
+      <source src="../_static/fx_1433.mp3" type="audio/mp3">
       Your browser does not support the <code>audio</code> element. 
     </audio>
     </figure>

@@ -3,7 +3,7 @@ CPG
 
 Files with a cpg extension are simple ini-files which describe the game's campaign as a set of levels, each having it's own section:
 
-.. code-block:: text
+.. code-block:: none
 
     [Level Name]
     Key1 = Value1

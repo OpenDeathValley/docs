@@ -4,6 +4,7 @@ FNT
 General
 -------
 
+Files with extension ``*.fnt`` contains a list of wide character 16-bit (2 bytes) with their 2D associated representation stored in embedded pictures (normal and bold type).
 
 Specifications
 --------------
@@ -14,8 +15,8 @@ Specifications
     for fnt_header.nb_entry{
         struct char_entry
     }
-    struct img_fnt image_00
-    struct img_fnt image_01
+    struct sbpicture
+    struct sbpicture
 
 FNT Header
 ----------
@@ -23,19 +24,28 @@ FNT Header
 .. code-block:: text
 
     +0x00:    SIGNATURE     [BYTE] * 6
-    +0x06:    UNK_DWORD_00  [DWORD]
+    +0x06:    VERSION       [DWORD]
     +0x0A:    FONT_NAME     [BYTE] * 36
-    +0x2E:    UNK_WORD_00   [WORD]     // TYPE SOMETHING ?
-    +0x30:    UNK_WORD_01   [WORD]
-    +0x32:    UNK_DWORD_02  [DWORD]    // HEIGHT ?
-    +0x36:    UNK_DWORD_03  [DWORD]    // Width rectangle letter
-    +0x3A:    UNK_DWORD_04  [DWORD]    // Maximum width letter
+    +0x2E:    TYPE          [DWORD]
+    +0x32:    HEIGHT        [DWORD]
+    +0x36:    UNK_DWORD_00  [DWORD]    // Width rectangle letter
+    +0x3A:    UNK_DWORD_01  [DWORD]    // Maximum width letter
     +0x3E:    NB_ENTRY      [DWORD]
-    if UNK_DWORD_00 >= 0x200:
-        +0x42:  UNK_DWORD_05  [DWORD]    // X_COORD + UNK_DWORD_05 ?
+    if VERSION >= 0x200:
+        +0x42:  UNK_DWORD_02  [DWORD]    // COORDINATE_Y + UNK_DWORD_05 ?
     end
 
-* Signature must be equal to "SBFONT"
+* ``SIGNATURE`` must be equal to "SBFONT"
+* ``TYPE``:
+    * `0x00`: letter with a border between them
+    * `0x02`: letter without a border between them
+
+.. figure:: ../images/fnt_type_example.png
+    :align: center
+
+    Truncated extracted image extracted from ``buttons_0.fnt`` and ``tooltips.fnt``
+
+
 
 Char Entry
 ----------
@@ -43,36 +53,17 @@ Char Entry
 .. code-block:: text
 
     +0x00:    CHAR_VALUE     [WORD]
-    +0x02:    Y_COORD        [DWORD]
+    +0x02:    COORDINATE_Y   [DWORD]
     +0x06:    WIDTH_LETTER   [DWORD]
-    +0x0A:    UNK_DWORD_00   [DWORD]
-    +0x0E:    UNK_DWORD_01   [DWORD]
+    +0x0A:    PRE_SPACING    [DWORD]
+    +0x0E:    POST_SPACING   [DWORD]
 
-* The "real" witdh is computed: WIDTH_LETTER + UNK_DWORD_00 + UNK_DWORD_01
+* The "real" witdh is computed: ``WIDTH_LETTER`` + ``PRE_SPACING`` + ``POST_SPACING``
 
-IMG fnt
--------
+SBPICTURE
+---------
 
-R5G6B5 bzip2 compressed image
-
-.. code-block:: text
-
-    +0x00:    WIDTH             [WORD]
-    +0x02:    HEIGHT            [WORD]
-    +0x04:    TYPE_COMPRESSION  [DWORD]
-    +0x08:    SIZE_COMPRESSED   [DWORD]
-    +0x0C:    DATA_COMPRESSED   [BYTE] * SIZE_COMPRESSED
-
-TYPE_COMPRESSION
-^^^^^^^^^^^^^^^^
-
-* 0x01: zlib compression, R5G6B5
-* 0x02: bz2 compression, R5G6B5
-
-ALL FNT
--------
-
-.. [[File:All_fnt.png|center|thumb |500px|Go fullscreen!]]
+See :ref:`sbpicture`
 
 Example (buttons_0.fnt and tooltips.fnt)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

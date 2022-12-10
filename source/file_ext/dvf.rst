@@ -47,7 +47,7 @@ File Header
     + 0x0a:    PADDING     [BYTE] * 20 // NOT USED
 
 * Size of ``Header`` : `0x1E`
-* ``VERSION`` must be equal to 0x200
+* ``VERSION`` must be equal to `0x200`
 
 Sprite Header
 ^^^^^^^^^^^^^

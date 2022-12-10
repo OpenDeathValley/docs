@@ -11,6 +11,7 @@ Welcome to OpenDeathValley's documentation!
     :name: mastertoc
     :includehidden:
     :titlesonly:
+    :maxdepth: 2
 
     game_information.rst
     game_data.rst
